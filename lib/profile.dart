@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -56,7 +57,8 @@ class ProfileScreen extends StatelessWidget {
                             child: IconButton(
                               icon: Icon(Icons.arrow_back, color: Colors.black),
                               onPressed: () {
-                                Navigator.pop(context);
+                                // Navigator.pop(context);
+                                Get.back();
                               },
                             ),
                           ),

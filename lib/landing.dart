@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:home_service/services.dart';
 import 'package:home_service/widgets/card.dart';
 
@@ -265,10 +266,15 @@ class LandingScreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.push(context, 
-                            MaterialPageRoute(
-                              builder: (context) => ServiceScreen(),
-                            ),
+                          // Navigator.push(context, 
+                          //   MaterialPageRoute(
+                          //     builder: (context) => ServiceScreen(),
+                          //   ),
+                          // );
+                          Get.to(
+                            () => ServiceScreen(),
+                            transition: Transition.native,
+                            duration: Duration(milliseconds: 400),
                           );
                         },
                         child: Text(

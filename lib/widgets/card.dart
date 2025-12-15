@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:home_service/profile.dart';
 
 class CardWidget extends StatelessWidget {
@@ -100,10 +101,15 @@ class CardWidget extends StatelessWidget {
                     height: 40,
                     child: OutlinedButton(
                       onPressed: () {
-                        Navigator.push(context,
-                          MaterialPageRoute(
-                            builder: (context) => ProfileScreen(),
-                        ),);
+                        // Navigator.push(context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => ProfileScreen(),
+                        // ),);
+                        Get.to(
+                          () => ProfileScreen(),
+                          transition: Transition.downToUp,
+                          duration: Duration(milliseconds: 400),
+                        );
                       },
                       style: OutlinedButton.styleFrom(
                         side: BorderSide(color: Colors.grey),

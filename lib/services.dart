@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:home_service/widgets/card.dart';
 
 class ServiceScreen extends StatefulWidget {
@@ -47,7 +48,8 @@ class _ServiceScreenState extends State<ServiceScreen> {
                     children: [
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          // Navigator.pop(context);
+                          Get.back();
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.white,
